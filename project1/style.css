@@ -1,0 +1,173 @@
+@font-face {
+    font-family: "ABCMonumentGrotesk";
+    src: url("fonts/ABCMonumentGrotesk-Regular-Trial.otf");
+  }
+  p{
+    font-family: "ABCMonumentGrotesk";
+    font-size: 14px;
+    margin: 0px 0px 0px 0px; 
+    padding: 4px 0px 0px 0px;
+  }
+  
+  /* Style the filters */
+  .btn {
+    font-family: "ABCMonumentGrotesk";
+    font-size: 14px;
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 0px 2px;
+    cursor: pointer;
+    text-align: left;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .btn::before{
+      content: "";
+      display: block;
+      background: url(icons/unchecked.png) no-repeat;
+      background-size:14px;
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin: 0 0px 0 0;
+  }
+  
+  .btn:hover {
+    font-style: italic;
+    color: grey;
+  }
+  
+  .btn.active {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .btn.active::before{
+      content: "";
+      display: block;
+      background: url(icons/checked.png) no-repeat;
+      background-size:14px;
+      float: left;
+      margin: 0 0px 0 0;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+
+  
+  /* Style the images */
+  .filterDiv {
+    float: left;
+    background-color: white;
+    color: black;
+    text-align: center;
+    margin: 2px;
+    display: none;
+  }
+  
+  .show {
+    display: inline-block;
+    break-inside: avoid-column;
+    width: 100%; 
+  }
+  
+  .container {
+    margin-top: 20px;
+    -webkit-column-count: 5; /* Chrome, Safari, Opera */
+    -moz-column-count: 5; /* Firefox */
+    column-count: 5;
+    column-gap: 8px;
+    }	
+
+    .container img{ 
+        width: 100%; 
+        padding: 0px;
+    }
+
+    @media (max-width: 1200px) {
+        .container {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    
+    }
+        
+    }
+
+  @media (max-width: 600px) {
+          .container {
+      -webkit-column-count: 1; /* Chrome, Safari, Opera */
+      -moz-column-count: 1; /* Firefox */
+      column-count: 1;
+      
+      }
+          
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+      }
+      
+      }
+
+      .credit{
+        font-family: "ABCMonumentGrotesk";
+        font-size: 14px;
+        margin:0px;
+        padding:0px;
+        text-align: left;
+        text-transform: capitalize;
+      }
+
+  /* Style the expanding 'info' section */
+      .collapsible {
+        font-family: "ABCMonumentGrotesk";
+        font-size: 14px;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        text-align: left;
+        display: inline-flex;
+        justify-content: flex-end;
+        outline: none;
+        max-width: 420px;
+        line-height: 22px;
+      }
+      
+      .collapsible.active{
+        font-weight: bold;
+        color: black;
+        text-decoration: line-through;
+        
+      }
+
+      .collapsible:hover {
+        font-style: italic;
+        color: grey;
+      }
+
+      .content {
+        margin-top: 20px;
+        display: none;
+        overflow: hidden;
+        max-width: 420px;
+        line-height: 20px;
+      }
+
+      .dashedborder{
+        border-bottom: 1px dashed #000;
+      }
+
+      
