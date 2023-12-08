@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "ABCMonumentGroteskRegular";
+  src: url("fonts/ABCMonumentGrotesk-Regular-Trial.otf");
+}
+
+@font-face {
+  font-family: "ABCMonumentGroteskBold";
+  src: url("fonts/ABCMonumentGrotesk-Bold-Trial.otf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "ABCMonumentGroteskRegular";
+  font-size: 14px;
+  overflow: hidden;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  padding-left: 235px;
+  width: 100%;
+
+  z-index: -1;
+}
+
+
+p {
+  font-family: "ABCMonumentGroteskBold";
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 40px;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  color: black;
+  width: 235px; 
+  height: 100%; 
+  padding: 24px;
+  box-shadow: 4px 0px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+button {
+  position: absolute;
+  bottom: 24px;
+  font-family: "ABCMonumentGroteskRegular";
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#actions {
+  font-family: "ABCMonumentGroteskRegular";
+  font-size: 14px;
+  width: 180px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .nav {
+    display:none;
+  }
+  video {
+    padding-left: 0px;
+  }
+}
