@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gdfwf23_phoenix</title>
+
+  <style>
+    @font-face {
+    font-family: "ABCMonumentGrotesk";
+    src: url("fonts/ABCMonumentGrotesk-Bold-Trial.otf");
+  }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      cursor: e-resize;
+    }
+
+    a{
+      font-family: "ABCMonumentGrotesk";
+      font-size: 16px;
+      mix-blend-mode: difference;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    #fullpage {
+      display: flex;
+      flex-direction: row; /* horizontal scrolling */
+    }
+
+    .section {
+      flex: 0 0 100vw; /* width for horizontal scrolling */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; 
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      
+    }
+
+    #section1 {
+      background-image: url('img/1.png');
+      color: #999;
+    }
+
+    #section2 {
+      background-image: url('img/2.png');
+      color: white;
+    }
+
+    #section3 {
+      background-image: url('img/3.png');
+      color: #999;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="fullpage">
+    <div class="section" id="section1">
+      <a href="ConeCollection.html" target=”_blank”>PROJECT 01<br>Hyperlinked Set</a>
+    </div>
+    
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const sections = document.querySelectorAll('.section');
+        let currentSectionIndex = 0;
+
+        document.addEventListener('click', handleClick);
+
+        function handleClick() {
+          currentSectionIndex = (currentSectionIndex + 1) % sections.length;
+          scrollToSection(currentSectionIndex);
+        }
+
+        function scrollToSection(index) {
+          sections.forEach((s) => s.classList.remove('active'));
+          sections[index].classList.add('active');
+          sections[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        }
+      });
+    </script>
+    
+  </body>
+</html>
